@@ -1,0 +1,9 @@
+name: "Learning about job concurrency"
+
+on:
+  workflow_dispatch:
+
+jobs:
+  job-1:
+    steps:
+      - run: echo "${{ github.workflow }}-${{ github.ref }}"
