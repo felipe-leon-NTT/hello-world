@@ -1,0 +1,14 @@
+name: Learning about matrix strategy
+
+on:
+  workflow_dispatch:
+
+jobs:
+  limit-concurrent-jobs:
+    runs-on: ubuntu-latest
+    strategy:
+      #max-parallel: 2
+      matrix:
+        version: [10, 12, 14]
+    steps:
+      run: echo ${{ matrix.version }}
