@@ -1,0 +1,38 @@
+name: "Concurrency - Maximum two jobs (group) concurrently running"
+
+on:
+  workflow_dispatch:
+
+jobs:
+  job-1:
+    runs-on: ubuntu-latest
+    concurrency:
+      group: first-group
+      cancel-in-progress: true
+    steps:
+      - run: echo "${{ github.workflow }}-${{ github.ref }}"
+      - run: sleep 60s
+  job-2:
+    runs-on: ubuntu-latest
+    concurrency:
+      group: first-group
+      cancel-in-progress: true
+    steps:
+      - run: echo "${{ github.workflow }}-${{ github.ref }}"
+      - run: sleep 60s
+  job-3:
+    runs-on: ubuntu-latest
+    concurrency:
+      group: second-group
+      cancel-in-progress: true
+    steps:
+      - run: echo "${{ github.workflow }}-${{ github.ref }}"
+      - run: sleep 60s
+  job-4:
+    runs-on: ubuntu-latest
+    concurrency:
+      group: second-group
+      cancel-in-progress: true
+    steps:
+      - run: echo "${{ github.workflow }}-${{ github.ref }}"
+      - run: sleep 60s
