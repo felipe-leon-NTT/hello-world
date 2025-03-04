@@ -1,4 +1,4 @@
-name: "Timeout - Stop job or step run if concrete time passes"
+name: "Timeout - Stop job or step run if some time passes"
 
 on:
   workflow_dispatch:
