@@ -1,3 +1,10 @@
+##
+##  To test this workflow: 
+##  1. Run it a first time
+##  2. After a few seconds and when the first run is in progress, run it a second time 
+##  3. The first run which is in progress should be stopped and the second should start
+##
+
 name: "Concurrency - Maximum one workflow concurrently running"
 
 on:
