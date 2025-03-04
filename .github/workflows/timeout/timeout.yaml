@@ -1,0 +1,18 @@
+name: "Timeout - Stop job or step run if concrete time passes"
+
+on:
+  workflow_dispatch:
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    timeout-minutes: 1
+    steps:
+      - run: echo "I'm gonna success"
+      - run: sleep 30s
+  job2:
+    runs-on: ubuntu-latest
+    timeout-minutes: 1
+    steps:
+      - run: echo "I'm gonna fail"
+      - run: sleep 180s
