@@ -39,7 +39,6 @@ jobs:
     runs-on: ubuntu-latest
     concurrency:
       group: second-group
-      cancel-in-progress: true
     steps:
       - run: echo "${{ github.workflow }}-${{ github.ref }}"
       - run: sleep 60s
@@ -47,7 +46,6 @@ jobs:
     runs-on: ubuntu-latest
     concurrency:
       group: second-group
-      cancel-in-progress: true
     steps:
       - run: echo "${{ github.workflow }}-${{ github.ref }}"
       - run: sleep 60s
@@ -55,7 +53,6 @@ jobs:
     runs-on: ubuntu-latest
     concurrency:
       group: second-group
-      cancel-in-progress: true
     steps:
       - run: echo "${{ github.workflow }}-${{ github.ref }}"
       - run: sleep 60s
