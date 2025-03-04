@@ -6,8 +6,10 @@
 ##  2.2 In the second group, one job should be cancelled and the other two should be executed
 ##  but not concurrently (while one of them is in progress the other one is queued)
 ##  
-##  NOTE: Concurrency in GH Actions only allow one job being executed and one being queued,
-##  the rest will be cancelled
+##  NOTES:
+##  - Concurrency in GH Actions only allow one job being executed and one being queued,
+##  the rest will be cancelled. 
+##  - The job groups work at workflow level (two different runs share the same groups)
 ##
 
 name: "Concurrency - Maximum one job in two groups concurrently running"
