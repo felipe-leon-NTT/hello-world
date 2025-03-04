@@ -20,3 +20,4 @@ jobs:
         version: [4, 5, 6, 7, 8]
     steps:
       - run: echo ${{ matrix.version }}
+      - run: sleep 3s
