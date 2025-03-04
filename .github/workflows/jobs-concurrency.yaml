@@ -1,10 +1,15 @@
-name: "Learning about job concurrency"
+name: "Concurrency - Maximum one workflow concurrently running"
 
 on:
   workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   job-1:
     runs-on: ubuntu-latest
     steps:
       - run: echo "${{ github.workflow }}-${{ github.ref }}"
+      - run: sleep 60s
