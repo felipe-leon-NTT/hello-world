@@ -1,8 +1,10 @@
 ##
 ##  To test this workflow: 
 ##  1. Run it
-##  2. The result should be that only one of the three jobs in both groups is running and 
-##  the other one is cancelled
+##  2. The results should be different in each group
+##  2.1 In the first group, two jobs should be cancelled and one successfully executed
+##  2.2 In the second group, one job should be cancelled and the other two should be executed
+##  but not concurrently (while one of them is in progress the other one is queued)
 ##
 
 name: "Concurrency - Maximum one job in two groups concurrently running"
