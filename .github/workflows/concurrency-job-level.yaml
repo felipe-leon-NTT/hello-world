@@ -1,4 +1,11 @@
-name: "Concurrency - Maximum two jobs (group) concurrently running"
+##
+##  To test this workflow: 
+##  1. Run it
+##  2. The result should be that only one of the three jobs in both groups is running and 
+##  the other one is cancelled
+##
+
+name: "Concurrency - Maximum one job in two groups concurrently running"
 
 on:
   workflow_dispatch:
@@ -23,12 +30,28 @@ jobs:
   job-3:
     runs-on: ubuntu-latest
     concurrency:
-      group: second-group
+      group: first-group
       cancel-in-progress: true
     steps:
       - run: echo "${{ github.workflow }}-${{ github.ref }}"
       - run: sleep 60s
   job-4:
+    runs-on: ubuntu-latest
+    concurrency:
+      group: second-group
+      cancel-in-progress: true
+    steps:
+      - run: echo "${{ github.workflow }}-${{ github.ref }}"
+      - run: sleep 60s
+  job-5:
+    runs-on: ubuntu-latest
+    concurrency:
+      group: second-group
+      cancel-in-progress: true
+    steps:
+      - run: echo "${{ github.workflow }}-${{ github.ref }}"
+      - run: sleep 60s
+  job-6:
     runs-on: ubuntu-latest
     concurrency:
       group: second-group
