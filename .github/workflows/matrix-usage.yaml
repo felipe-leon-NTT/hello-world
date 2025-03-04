@@ -1,4 +1,4 @@
-name: "Matrix - Basic usa cases"
+name: "Matrix - Basic use cases"
 
 on:
   workflow_dispatch:
