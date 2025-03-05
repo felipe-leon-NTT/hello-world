@@ -6,6 +6,7 @@ on:
     types: [completed]
     branches:
       - 'main'
+      - 'testing-trigger'
 
 jobs:
   hello-world:
