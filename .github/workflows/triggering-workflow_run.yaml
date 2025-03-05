@@ -12,5 +12,4 @@ jobs:
   hello-world:
     runs-on: ubuntu-latest
     steps:
-      - run: exit 2
       - run: echo "Hello, World! I ran because a particular workflow was successfully executed"
