@@ -5,7 +5,7 @@ on:
     workflows: ["Simple workflow that runs on every push"]
     types: [completed]
     branches:
-      - '!main'
+      - 'main'
 
 jobs:
   hello-world:
