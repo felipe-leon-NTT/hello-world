@@ -4,9 +4,6 @@ on:
   workflow_run:
     workflows: ["Simple workflow that runs on every push"]
     types: [completed]
-    branches:
-      - 'main'
-      - 'testing-trigger'
 
 jobs:
   hello-world:
