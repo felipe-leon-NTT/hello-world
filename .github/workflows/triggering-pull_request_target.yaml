@@ -8,6 +8,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "Hello, World! I ran because a pull request was opened"
-      - run: Checkout code
+      - name: Checkout code
         uses: actions/checkout@v2
       - run: ls -l
