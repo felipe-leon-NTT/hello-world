@@ -2,8 +2,8 @@ name: "Simple workflow that runs on every push"
 
 on:
   push:
-    paths:
-      - '!.github/**'
+    #paths:
+    #  - '!.github/**'
 
 jobs:
   simple-job:
