@@ -2,10 +2,10 @@ name: "Simple workflow that runs on every push"
 
 on:
   push:
-    paths:
+    paths_ignore:
       ## Will ignore push events that modify something in .github folder,
       ## even if there are changes in other paths
-      - '!.github/**'
+      - '.github/**'
 
 jobs:
   simple-job:
