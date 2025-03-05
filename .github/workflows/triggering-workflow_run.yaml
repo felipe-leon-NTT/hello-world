@@ -4,6 +4,8 @@ on:
   workflow_run:
     workflows: ["Simple workflow that runs on every push"]
     types: [completed]
+    branches:
+      - '!main'
 
 jobs:
   hello-world:
