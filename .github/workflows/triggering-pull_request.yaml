@@ -1,4 +1,4 @@
-name: 'Triggering - Run a workflow with the context of the compare branch'
+name: 'Triggering - Run a workflow with the context of the base branch'
 
 on:
   pull_request:
@@ -7,7 +7,7 @@ jobs:
   hello-world:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Hello, World! I ran because a pull request was opened and I have the context of the compare branch"
+      - run: echo "Hello, World! I ran because a pull request was opened and I have the context of the base branch"
       - name: Checkout code
         uses: actions/checkout@v2
       - run: ls -l
