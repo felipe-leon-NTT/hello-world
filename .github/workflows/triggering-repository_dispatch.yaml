@@ -4,7 +4,13 @@ on:
   repository_dispatch:
 
 jobs:
-  hello-world:
+  polite-greeting:
     runs-on: ubuntu-latest
+    if: ${{ github.event.polite }}
     steps:
-      - run: echo "Hello, World! I ran because some request from outside was received"
+      - run: echo "Hello, Mr. ${{ github.event.name }}"
+  impolite-greeting:
+    runs-on: ubuntu-latest
+    if: ${{ !github.event.polite }}
+    steps:
+      - run: echo "Hi, ${{ github.event.name }}!"
