@@ -6,11 +6,11 @@ on:
 jobs:
   polite-greeting:
     runs-on: ubuntu-latest
-    if: ${{ github.event.polite }}
+    if: ${{ github.event.client_payload.polite }}
     steps:
-      - run: echo "Hello, Mr. ${{ github.event.name }}"
+      - run: echo "Hello, Mr. ${{ github.event.client_payload.name }}"
   impolite-greeting:
     runs-on: ubuntu-latest
-    if: ${{ !github.event.polite }}
+    if: ${{ !github.event.client_payload.polite }}
     steps:
-      - run: echo "Hi, ${{ github.event.name }}!"
+      - run: echo "Hi, ${{ github.event.client_payload.name }}!"
