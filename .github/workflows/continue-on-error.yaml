@@ -9,7 +9,7 @@ jobs:
     steps:
       - id: first-step
         run: exit 1
-      - if: ${{ failure() && steps.first-step.outcome == 'failure' }}
+      - if: ${{ always() && steps.first-step.outcome == 'failure' }}
         run: |
           echo "Hello World! I will run always"
           echo "::debug::(The first step failed)" # This echo will be only printed in the ACTIONS_STEP_DEBUG is set to true in repo env vars
