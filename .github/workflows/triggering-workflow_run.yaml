@@ -3,7 +3,7 @@ name: 'Triggering - Run a workflow when other one runs'
 on:
   workflow_run:
     workflows: ["Simple workflow that runs on every push"]
-    types: [completed]
+    types: [requested, completed]
 
 jobs:
   hello-world:
