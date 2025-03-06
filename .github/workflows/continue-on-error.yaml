@@ -9,6 +9,8 @@ jobs:
     steps:
       - id: first-step
         run: exit 1
-      - if: ${{ always() }}
-        run: echo "Hello World! I will run always (${{ steps.first-step.outcome }})"
+      - if: ${{ always() && steps.first-step.outcome == failure }}
+        run: |
+          echo "Hello World! I will run always"
+          echo "::debug::(The first step failed)"
       
