@@ -1,0 +1,13 @@
+name: 'Workflow with a job that has two steps that are going to run always'
+
+on:
+  workflow_dispatch:
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - run: exit 1
+      - if: ${{ always() }}
+        run: echo "Hello World! I will run always"
+      
