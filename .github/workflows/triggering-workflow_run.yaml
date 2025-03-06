@@ -9,9 +9,9 @@ jobs:
   hello-world:
     runs-on: ubuntu-latest
     steps:
-      - if: ${{ github.event.action == requested }}
+      - if: ${{ github.event.action == 'requested' }}
         run: |
           echo "Hello, World! I ran because a particular workflow was requested to run"
-      - if: ${{ github.event.action == completed }}
+      - if: ${{ github.event.action == 'completed' }}
         run: |
           echo "Hello, World! I ran because a particular workflow was successfully executed"
