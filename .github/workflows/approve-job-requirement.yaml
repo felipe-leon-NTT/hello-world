@@ -6,6 +6,7 @@ on:
 jobs:
   job-with-approval:
     runs-on: ubuntu-latest
+    ## We must configure the environment "development" and the required approvals
     environment: development
     steps:
       - run: echo "Hello World! I ran because someone approved it"
