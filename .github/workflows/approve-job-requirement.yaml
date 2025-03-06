@@ -8,4 +8,4 @@ jobs:
     runs-on: ubuntu-latest
     environment: development
     steps:
-      - run: echo "Hello World! I ran because someone approves it"
+      - run: echo "Hello World! I ran because someone approved it"
