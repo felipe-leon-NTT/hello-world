@@ -7,7 +7,8 @@ jobs:
   job1:
     runs-on: ubuntu-latest
     steps:
-      - run: exit 1
+      - if: first-step
+        run: exit 1
       - if: ${{ always() }}
-        run: echo "Hello World! I will run always"
+        run: echo "Hello World! I will run always (${{ steps.first-step.outcome }})"
       
