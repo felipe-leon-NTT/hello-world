@@ -1,0 +1,10 @@
+name: 'Triggering - Run a workflow from outside of GH'
+
+on:
+  repository_dispatch:
+
+jobs:
+  hello-world:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Hello, World! I ran because some request from outside was received"
