@@ -12,3 +12,4 @@ jobs:
       - run: |
           echo "Hello, World! I ran because a particular workflow was requested to run or was
           successfully executed (different workflow execution for each one)"
+      - run: echo "${{ github.event.workflow_run.conclusion }}"
