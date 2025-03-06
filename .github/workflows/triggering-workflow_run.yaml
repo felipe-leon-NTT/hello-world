@@ -9,4 +9,6 @@ jobs:
   hello-world:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Hello, World! I ran because a particular workflow was successfully executed"
+      - run: |
+          echo "Hello, World! I ran because a particular workflow was requested to run or was
+          successfully executed (different workflow execution for each one)"
