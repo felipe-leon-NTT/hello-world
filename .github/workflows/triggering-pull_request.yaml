@@ -2,7 +2,7 @@ name: 'Triggering - Run a workflow with the context of the compare branch (pull_
 
 on:
   pull_request:
-    branches: [main]
+    branches: [mainf]
 
 jobs:
   hello-world:
