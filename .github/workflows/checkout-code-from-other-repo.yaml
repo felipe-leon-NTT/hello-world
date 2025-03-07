@@ -7,10 +7,14 @@ jobs:
   job1:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: 'Checking out code from other repo'
+        uses: actions/checkout@v4
         with:
+          ## Repo to checkout
           repository: felipe-leon-NTT/juice-shop
+          ## Reference: branch, tag, etc
           ref: featureX
+          ## Download folder
           path: juice-shop-ck
       - run: pwd
       - run: ls -l juice-shop-ck
