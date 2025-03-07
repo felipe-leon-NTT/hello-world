@@ -1,0 +1,10 @@
+name: 'Triggering - Run job based on a check run activity'
+
+on:
+  check_run:
+    types: [created]
+
+jobs:
+  jobs1:
+    runs-on: ubuntu-latest
+    run: echo "Hello, World!"
