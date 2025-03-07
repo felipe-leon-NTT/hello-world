@@ -6,7 +6,7 @@ on:
     branches: [main]
 
 jobs:
-  hello-world:
+  hello-world-PR:
     runs-on: ubuntu-latest
     steps:
       - run: echo "Hello, World! I ran because a pull request was opened and I have the context of the compare branch"
