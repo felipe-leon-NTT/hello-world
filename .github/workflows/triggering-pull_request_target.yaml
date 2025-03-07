@@ -11,3 +11,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
       - run: ls -l
+      - name: Print GitHub context
+        env:
+          GITHUB_CONTEXT: ${{ toJSON(github) }}
+        run: echo "$GITHUB_CONTEXT"
