@@ -14,7 +14,10 @@ jobs:
   job2:
     runs-on: ubuntu-latest
     needs: job1
+    env:
+      GITHUB_NEEDS: ${{ toJSON(needs) }}
     steps:
       - name: 'Print value'
         run: echo ${{ needs.job1.outputs.output1 }}
-      - run: echo ${{ toJSON(needs) }}
+      - run: echo $GITHUB_NEEDS
+      
