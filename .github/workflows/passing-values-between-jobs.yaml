@@ -17,4 +17,4 @@ jobs:
     steps:
       - name: 'Print value'
         run: echo ${{ needs.job1.outputs.output1 }}
-      - run: ${{ toJSON(needs) }}
+      - run: echo ${{ toJSON(needs) }}
