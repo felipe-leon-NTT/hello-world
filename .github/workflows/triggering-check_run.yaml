@@ -1,11 +1,11 @@
-name: 'Triggering - Run job based on a check run activity'
+# name: 'Triggering - Run job based on a check run activity'
 
-on:
-  check_run:
-    types: [created, rerequested, completed, requested_action]
+# on:
+#   check_run:
+#     types: [created, rerequested, completed, requested_action]
 
-jobs:
-  jobs1:
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo "Hello, World!"
+# jobs:
+#   jobs1:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - run: echo "Hello, World!"
