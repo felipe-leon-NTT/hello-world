@@ -13,5 +13,5 @@ jobs:
           ref: featureX
           path: juice-shop-ck
       - run: pwd
-      - run: ls -l
+      - run: ls -l juice-shop-ck
       
