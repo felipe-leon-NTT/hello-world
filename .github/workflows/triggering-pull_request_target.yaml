@@ -1,4 +1,4 @@
-name: 'Triggering - Run a workflow with the context of the base branch'
+name: 'Triggering - Run a workflow with the context of the base branch (pull_request_target)'
 
 on:
   pull_request_target:

@@ -1,4 +1,4 @@
-name: 'Triggering - Run a workflow with the context of the compare branch'
+name: 'Triggering - Run a workflow with the context of the compare branch (pull_request)'
 
 on:
   pull_request:
