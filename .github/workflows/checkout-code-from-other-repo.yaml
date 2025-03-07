@@ -10,4 +10,5 @@ jobs:
       - uses: actions/checkout@v4
         with:
           repository: felipe-leon-NTT/juice-shop
+          ref: featureX
       - run: ls -l
