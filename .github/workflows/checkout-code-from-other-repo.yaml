@@ -11,7 +11,7 @@ jobs:
         with:
           repository: felipe-leon-NTT/juice-shop
           ref: featureX
-          path: /home/runner/work
+          path: juice-shop-ck
       - run: pwd
-      - run: ls -l /home/runner/work
+      - run: ls -l
       
