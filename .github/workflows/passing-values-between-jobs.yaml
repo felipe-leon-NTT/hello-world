@@ -11,7 +11,6 @@ jobs:
     steps:
       - id: first_step
         run: echo "passing_value=iamgonnabepassed" >> $GITHUB_OUTPUT
-      - run: echo "PASSING_VALUE=iamgonnabepassedtoo" >> $GITHUB_ENV
   job2:
     runs-on: ubuntu-latest
     needs: job1
@@ -21,5 +20,4 @@ jobs:
       - name: 'Print value'
         run: echo ${{ needs.job1.outputs.output1 }}
       - run: echo $GITHUB_NEEDS
-      - run: echo ${{ env.PASSING_VALUE }}
       
