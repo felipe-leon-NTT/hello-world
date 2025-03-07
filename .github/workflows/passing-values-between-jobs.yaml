@@ -1,0 +1,18 @@
+name: 'Passing values between two jobs'
+
+on:
+  workflow_dispatch:
+
+jobs:
+  job1:
+    id: first_job
+    runs-on: ubuntu-latest
+    steps:
+      - id: first_step
+        run: echo "passing_value=iamgonnabepassed" >> $GITHUB_OUTPUT
+  job2:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 'Print value'
+        run: echo ${{ jobs.first_job.steps.first.step.passing_value }}
+    
