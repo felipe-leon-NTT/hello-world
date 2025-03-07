@@ -2,7 +2,7 @@ name: 'Triggering - Run job based on a check run activity'
 
 on:
   check_run:
-    types: [created]
+    types: [completed, rerequested, completed, requested_action]
 
 jobs:
   jobs1:
