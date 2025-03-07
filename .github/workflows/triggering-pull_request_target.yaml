@@ -4,7 +4,7 @@ on:
   pull_request_target:
 
 jobs:
-  hello-world:
+  hello-world-PRT:
     runs-on: ubuntu-latest
     steps:
       - run: echo "Hello, World! I ran because a pull request was opened and I have the context of the base branch"
