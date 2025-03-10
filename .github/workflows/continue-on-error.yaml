@@ -11,6 +11,6 @@ jobs:
         run: exit 1
       - if: ${{ failure() && steps.first-step.outcome == 'failure' }}
         run: |
-          echo "Hello World! I will run always"
+          echo "Hello World! I will run only if the first step has failed"
           echo "::debug::(The first step failed)" # This echo will be only printed in the ACTIONS_STEP_DEBUG is set to true in repo env vars
       
