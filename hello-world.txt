@@ -1,5 +1,3 @@
 Hello World!
 
-This is a example repo with a lot of GH Actions workflows to try and test features.
-
-
+This is a example repo with a lot of GH Actions workflows to try and test the different features.
