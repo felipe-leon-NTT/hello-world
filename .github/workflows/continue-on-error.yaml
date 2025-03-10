@@ -1,4 +1,4 @@
-name: 'Workflow with a job that has two steps that are going to run always'
+name: 'Workflow with a step that runs in failure case'
 
 on:
   workflow_dispatch:
