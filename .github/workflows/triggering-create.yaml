@@ -1,0 +1,12 @@
+name: 'Triggering - Run a workflow when a reference (branch or tag) is created'
+
+on:
+  create:
+
+jobs:
+  hello-on-branch-creation:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "${{ toJSON(github.event) }}"
+
+  #hello-on-tag-creation:
