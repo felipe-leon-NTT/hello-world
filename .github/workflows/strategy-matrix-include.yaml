@@ -14,7 +14,6 @@ jobs:
           - user: bot   ## Will be added to all the combinations
           - severity: 'high'  ## Will be added only to combinations with severity: high (overwriting user: bot)
             user: fleonfer
-          - team: 'rocket'
     steps:
-      - name: Print matrix combinations   ## Must result in 2*3 combinations
+      - name: Print matrix combinations
         run: echo "${{ toJSON(matrix) }}"
