@@ -11,4 +11,4 @@ jobs:
         color: ['blue', 'red']
         severity: ['high', 'medium', 'low']
     steps:
-      - run: echo "Color: ${{ matrix.color }} | Severity: ${{ matrix.severity }}"
+      - run: echo "Color ${{ matrix.color }} | Severity ${{ matrix.severity }}"
