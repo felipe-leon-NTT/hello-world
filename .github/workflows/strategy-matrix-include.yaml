@@ -6,15 +6,23 @@ on:
 jobs:
   using-include:
     runs-on: ubuntu-latest
+    # strategy:
+    #   matrix:
+    #     color: ['blue', 'red']
+    #     severity: ['high', 'medium', 'low']
+    #     include:
+    #       - severity: 'urgent'
+    #         user: fleonfer
+    #       - severity: 'high'
+    #         user: 'secondincharge'
     strategy:
       matrix:
-        color: ['blue', 'red']
-        severity: ['high', 'medium', 'low']
+        fruit: [apple, pear]
+        animal: [cat, dog]
         include:
-          - severity: 'urgent'
-            user: fleonfer
-          - severity: 'high'
-            user: 'secondincharge'
+          - color: green
+          - color: pink
+            animal: cat
     steps:
       - name: Print matrix combinations
         run: echo "${{ toJSON(matrix) }}"
