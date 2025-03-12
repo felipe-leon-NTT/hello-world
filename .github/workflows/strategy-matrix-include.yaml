@@ -11,7 +11,9 @@ jobs:
         color: ['blue', 'red']
         severity: ['high', 'medium', 'low']
         include:
-          - user: fleonfer
+          - severity: high
+            user: fleonfer
+          - user: bot
     steps:
       - name: Print matrix combinations
         run: echo "${{ toJSON(matrix) }}"
