@@ -23,6 +23,11 @@ jobs:
           - color: green
           - color: pink
             animal: cat
+          - fruit: apple
+            shape: circle
+          - fruit: banana
+          - fruit: banana
+            animal: cat
     steps:
       - name: Print matrix combinations
         run: echo "${{ toJSON(matrix) }}"
