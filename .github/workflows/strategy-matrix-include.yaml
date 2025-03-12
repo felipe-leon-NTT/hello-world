@@ -13,6 +13,8 @@ jobs:
         include:
           - severity: 'urgent'
             user: fleonfer
+          - severity: 'high'
+            user: 'secondincharge'
     steps:
       - name: Print matrix combinations
         run: echo "${{ toJSON(matrix) }}"
