@@ -1,3 +1,5 @@
+# PR TEMPLATE DEFINED FROM ROOT DIR
+
 ## Description
 
 Please include a summary of the changes and the related issue. Explain the motivation behind these changes and any relevant context.
