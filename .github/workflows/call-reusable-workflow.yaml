@@ -1,0 +1,21 @@
+name: Caller - Nested Reusable Workflow Example
+
+on:
+  workflow_dispatch:
+
+jobs:
+  call-print-config-workflow:
+    name: Call print config reusable workflow
+    uses: felipe-leon-NTT/temp/.github/workflows/print-config.yml@main
+    # secrets: inherit
+
+  show-final-output:
+    name: Show propagated outputs
+    runs-on: ubuntu-latest
+    needs:
+      - call-print-config-workflow
+    steps:
+      - name: Print outputs from reusable workflows
+        run: |
+          echo "Nested call artifact: ${{ needs.call-print-config-workflow.outputs.technology }}"
+          echo "Direct call artifact: ${{ needs.call-print-config-workflow.outputs.project-name }}"
